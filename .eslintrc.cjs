@@ -31,7 +31,7 @@ module.exports = {
     'no-console': 'error',
     'no-debugger': 'error',
     'react/prop-types': 'off',
-    'max-len': ['error', { code: 180 }],
+    'max-len': ['error', { code: 150 }],
     quotes: ['error', 'single'],
     'no-underscore-dangle': 'off',
     'template-curly-spacing': 'off',
@@ -40,6 +40,8 @@ module.exports = {
     'react/jsx-curly-spacing': ['error', { when: 'never', children: true }],
     'react/self-closing-comp': 'error',
     'import/extensions': ['error', 'never'],
+    // Reglas para TypeScript
+    '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
   },
   settings: {
     react: {

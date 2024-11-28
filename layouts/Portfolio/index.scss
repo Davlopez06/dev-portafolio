@@ -1,5 +1,9 @@
 .portfolio {
-    align-items: center;
-    display: flex;
-    justify-content: center;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  max-height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
+  width: 100%;
 }
