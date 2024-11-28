@@ -1,4 +1,4 @@
-import Portfolio from "@/layouts/Portfolio";
+import Portfolio from '@/layouts/Portfolio';
 
 const Home = () => {
   return <Portfolio />;
