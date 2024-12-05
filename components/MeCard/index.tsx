@@ -1,38 +1,22 @@
 import Image from 'next/image';
 import './index.scss';
-import Instagram from '@/resources/images/instagram.svg';
-import LinkedIn from '@/resources/images/linkedIn.svg';
-import Whatsapp from '@/resources/images/whatsapp.svg';
-import { StaticImport } from 'next/dist/shared/lib/get-img-props';
+import { MeCardProps } from '@/utils/interfaces';
 // import MePhoto from '@/resources/images/me.png';
 
-interface social {
-  name: string;
-  value: string;
-  icon: StaticImport | string;
-}
-export interface MeCardProps {
-  instagramUrl: string;
-  job: string;
-  linkedInUrl: string;
-  name: string;
-  social: Array<social>;
-  whatsappUrl: string;
-}
-
 const MeCard = (props: MeCardProps) => {
-  const { instagramUrl = '', job = '', linkedInUrl = '', name = '', social = [], whatsappUrl = '' } = props || {};
+  const { job = '', name = '', social = [], socialMedia = [] } = props || {};
 
   const getTopCard = () => {
     return (
       <div className="me-card-personal-information">
         <Image
+          // src={MePhoto}
           alt="img"
           className="me-card-personal-information-img"
-          height={200}
-          // src={MePhoto}
+          height={220}
+          loading="lazy"
           src="https://i.pinimg.com/736x/dc/f8/b0/dcf8b0bd5cb6184960e0d32f917b0efd.jpg"
-          width={200}
+          width={220}
         />
         <p className="me-card-personal-information-name">{name}</p>
         <p className="me-card-personal-information-profession">{job}</p>
@@ -58,23 +42,26 @@ const MeCard = (props: MeCardProps) => {
     return <>{socials}</>;
   };
 
+  const getSocialMedia = () => {
+    if (socialMedia.length === 0) return null;
+
+    return socialMedia.map((item, i) => {
+      const { url = '', icon = '' } = item || {};
+      return (
+        <a href={url} key={`${url}-${i}`}>
+          <Image src={icon} alt="instagram" width={20} height={20} />
+        </a>
+      );
+    });
+  };
+
   const getContactDetail = () => {
     return (
       <div className="me-card-contact-information">
         {getSocial()}
         <div className="me-card-contact-information-item">
           <div style={{ width: '42px' }} />
-          <div className="me-card-contact-information-social">
-            <a href={instagramUrl}>
-              <Image src={Instagram} alt="instagram" width={20} height={20} />
-            </a>
-            <a href={linkedInUrl}>
-              <Image src={LinkedIn} alt="linkedin" width={20} height={20} />
-            </a>
-            <a href={whatsappUrl}>
-              <Image src={Whatsapp} alt="whatsapp" width={20} height={20} />
-            </a>
-          </div>
+          <div className="me-card-contact-information-social">{getSocialMedia()}</div>
         </div>
       </div>
     );

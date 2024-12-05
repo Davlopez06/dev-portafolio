@@ -3,12 +3,25 @@
   border: 1px solid var(--dark-90);
   border-radius: 12px;
   box-shadow: 0px 4px 6px 0px var(--dark-90);
+  margin: 90px 0;
   max-width: 800px;
   min-height: 616px;
   overflow: hidden;
-  padding: 16px;
+  padding: 20px;
   position: relative;
   width: 100%;
+
+  &-ctn {
+    max-width: 800px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    width: 100%;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  
 
   &-menu {
     background: var(--dark-90);
@@ -26,9 +39,67 @@
     border: none;
     color: var(--white);
     font-size: 14px;
+    font-weight: 300;
 
     &.active {
       color: var(--green-90);
+      font-weight: 500;
     }
+  }
+
+  &-view {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &-view-title {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    gap: 12px;
+    
+    &::after {
+      background: var(--green-90);
+      border-radius: 100px;
+      content: '';
+      padding: 2px 0;
+      width: 40px;
+    }
+  }
+
+  &-view-subtitle {
+    font-weight: 500;
+  }
+
+  &-view-cards {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &-view-card {
+    background: var(--dark-90);
+    border-radius: 9px;
+    display: flex;
+    gap: 20px;
+    max-width: 371px;
+    padding: 16px;
+    width: 100%;
+
+    &:last-child {
+      grid-column: span 2;
+      margin: 0 auto;
+    }
+  }
+
+  &-view-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &-view-card-title {
+    font-weight: 500;
   }
 }
