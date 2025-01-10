@@ -93,14 +93,17 @@ export const ABOUT_CONFIG: AboutConfig = {
   ],
   recomendedCard: [
     {
+      gender: 'female',
       name: 'Paula Paredes',
       recomended: 'I recommend David for his outstanding problem-solving skills with agility and willingness. His ability to develop creative and efficient solutions. He is always willing to take on new challenges and approaches each task with a positive attitude. His quick and adaptable approach makes him a great asset to any team.',
     },
     {
+      gender: 'male',
       name: 'Christhian Silupú',
       recomended: 'I would not hesitate to recommend David to any company looking for a talented and reliable professional in the field of computer engineering. I am sure that his experience and skills will be a great contribution to any project he is involved in. I have had the opportunity to work with him on several projects and he is an excellent co-worker..',
     },
     {
+      gender: 'male',
       name: 'Richard Llano',
       recomended: 'In short, David is an exceptionally talented and committed Full Stack Developer. His positive attitude, work ethic, and willingness to learn and grow make him stand out as an excellent fit for your team. Don\'t hesitate to consider him to make the most of his passion and skills in web development!',
     },

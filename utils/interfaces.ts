@@ -32,6 +32,7 @@ interface DoingCard {
 interface RecomendedCard {
   name: string;
   recomended: string;
+  gender: string;
 }
 
 export interface AboutConfig {
