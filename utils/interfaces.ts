@@ -41,3 +41,21 @@ export interface AboutConfig {
   doingCard: Array<DoingCard>;
   recomendedCard: Array<RecomendedCard>;
 }
+
+export interface ResumeItems {
+  title: string;
+  date: string;
+description: string;
+}
+
+interface Skills {
+  name: string;
+  experience: string;
+}
+
+export interface ResumeConfig {
+  title: string;
+  education: Array<ResumeItems>;
+  experience: Array<ResumeItems>;
+  skills: Array<Skills>;
+}

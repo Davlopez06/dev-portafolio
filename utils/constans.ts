@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import { AboutConfig, MeCardProps, NavItems } from './interfaces';
+import { AboutConfig, MeCardProps, NavItems, ResumeConfig } from './interfaces';
 import MailIcon from '@/resources/images/mail.svg';
 import MobileIcon from '@/resources/images/mobile.svg';
 import BirthdayIcon from '@/resources/images/birthday.svg';
@@ -108,4 +108,107 @@ export const ABOUT_CONFIG: AboutConfig = {
       recomended: 'In short, David is an exceptionally talented and committed Full Stack Developer. His positive attitude, work ethic, and willingness to learn and grow make him stand out as an excellent fit for your team. Don\'t hesitate to consider him to make the most of his passion and skills in web development!',
     },
   ],
+}
+
+export const RESUME_CONFIG: ResumeConfig = {
+  title: 'Resume',
+  education: [
+    {
+      title: 'Technology in software development, ITM',
+      date: '2018 - 2023',
+      description: 'I have studied the basics of programming, data structures, algorithms, and software engineering',
+    },
+    {
+      title: 'Full Stack Development, Henry',
+      date: '2022',
+      // eslint-disable-next-line max-len
+      description:
+        'Henry Full Stack Bootcamp is an intensive program that teaches web development using technologies like JavaScript, React, and Node.js, with a hands-on approach focused on employability. It also offers mentoring and job search support to ensure graduates success.',
+    },
+    {
+      title: 'Master in Javascript, Udemy',
+      date: '2022',
+      description: 'Master in Javascript course, which covers advanced topics in JavaScript',
+    },
+    {
+      title: 'Systems engineering, ITM',
+      date: '2023 - 2025',
+      // eslint-disable-next-line max-len
+      description:
+        'Systems Engineering is a discipline that designs, develops, and manages complex systems by integrating hardware, software, and processes to solve problems. It combines areas like programming, networks, and data analysis to optimize technological solutions.',
+    },
+  ],
+  experience: [
+    {
+      title: 'Frontend Developer, H2A Group',
+      date: '2021 - 2022',
+      // eslint-disable-next-line max-len
+      description:
+        'Developed custom web pages for clients using HTML, CSS, and JavaScript, ensuring appealing and functional designs. Tailored solutions to meet specific project requirements, delivering an optimized user experience.',
+    },
+    {
+      title: 'Full Stack Developer, Henry',
+      date: '2022',
+      // eslint-disable-next-line max-len
+      description:
+        'Designed and developed full-stack web applications using React, Node.js, PostgreSQL, MongoDB, and Redux. Collaborated in building scalable and efficient solutions, implementing both front-end and back-end functionalities to meet project requirements.',
+    },
+    {
+      title: 'Middle Full Stack Developer, Infobae',
+      date: '2022 - Actuality',
+      // eslint-disable-next-line max-len
+      description:
+        'Developed and maintained scalable web applications as a Middle Full Stack Developer at Infobae, utilizing React, Next.js, Node.js, and TypeScript. Implemented cloud deployments on Google Cloud Platform and integrated Google Sheets automation using Apps Script to streamline workflows and enhance efficiency',
+    },
+  ],
+  skills: [
+    {
+      name: 'Javascript',
+      experience: '80%',
+    },
+    {
+      name: 'React',
+      experience: '90%',
+    },
+    {
+      name: 'Node.js',
+      experience: '70%',
+    },
+    {
+      name: 'TypeScript',
+      experience: '65%',
+    },
+    {
+      name: 'HTML/CSS',
+      experience: '85%',
+    },
+    {
+      name: 'PostgreSQL',
+      experience: '60%',
+    },
+    {
+      name: 'MongoDB',
+      experience: '65%',
+    },
+    {
+      name: 'Next',
+      experience: '70%',
+    },
+    {
+      name: 'Redux',
+      experience: '70%',
+    },
+    {
+      name: 'C#',
+      experience: '50%',
+    },
+    {
+      name: 'Java',
+      experience: '50%',
+    },
+    {
+      name: 'Gcloud',
+      experience: '60%',
+    },
+  ]
 }

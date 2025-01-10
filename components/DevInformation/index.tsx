@@ -2,11 +2,11 @@
 
 import { useState } from 'react';
 import './index.scss';
-import { ABOUT_CONFIG, NAV_ITEMS } from '@/utils/constans';
+import { ABOUT_CONFIG, NAV_ITEMS, RESUME_CONFIG } from '@/utils/constans';
 import dynamic from 'next/dynamic';
-import Resume from './_children/Resume';
 
 const About = dynamic(() => import('./_children/About'));
+const Resume = dynamic(() => import('./_children/Resume'));
 
 const DevInformation = () => {
   const [view, setView] = useState<string>('about');
@@ -33,7 +33,7 @@ const DevInformation = () => {
   };
 
   const getView = () => {
-    if (view === 'resume') return <Resume /> 
+    if (view === 'resume') return <Resume {...RESUME_CONFIG}/> 
     if (view !== 'about') return view;
 
     return <About {...ABOUT_CONFIG} />;
