@@ -4,10 +4,10 @@ import { useState } from 'react';
 import './index.scss';
 import { ABOUT_CONFIG, NAV_ITEMS, PORTFOLIO_CONFIG, RESUME_CONFIG } from '@/utils/constans';
 import dynamic from 'next/dynamic';
-import Portfolio from './_children/Portfolio';
 
 const About = dynamic(() => import('./_children/About'));
 const Resume = dynamic(() => import('./_children/Resume'));
+const Portfolio = dynamic(() => import('./_children/Portfolio'))
 
 const DevInformation = () => {
   const [view, setView] = useState<string>('about');
