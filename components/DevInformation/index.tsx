@@ -4,10 +4,11 @@ import { useState } from 'react';
 import './index.scss';
 import { ABOUT_CONFIG, NAV_ITEMS, PORTFOLIO_CONFIG, RESUME_CONFIG } from '@/utils/constans';
 import dynamic from 'next/dynamic';
+import Contact from './_children/Contact';
 
 const About = dynamic(() => import('./_children/About'));
 const Resume = dynamic(() => import('./_children/Resume'));
-const Portfolio = dynamic(() => import('./_children/Portfolio'))
+const Portfolio = dynamic(() => import('./_children/Portfolio'));
 
 const DevInformation = () => {
   const [view, setView] = useState<string>('about');
@@ -34,9 +35,9 @@ const DevInformation = () => {
   };
 
   const getView = () => {
-    if (view === 'resume') return <Resume {...RESUME_CONFIG}/> 
+    if (view === 'resume') return <Resume {...RESUME_CONFIG} />;
     if (view === 'portfolio') return <Portfolio {...PORTFOLIO_CONFIG} />;
-    if (view !== 'about') return view;
+    if (view === 'contact') return <Contact />;
 
     return <About {...ABOUT_CONFIG} />;
   };
