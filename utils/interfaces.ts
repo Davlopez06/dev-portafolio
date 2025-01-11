@@ -1,4 +1,4 @@
-import { StaticImport } from 'next/dist/shared/lib/get-img-props';
+import { StaticImageData, StaticImport } from 'next/dist/shared/lib/get-img-props';
 
 interface social {
   name: string;
@@ -58,4 +58,17 @@ export interface ResumeConfig {
   education: Array<ResumeItems>;
   experience: Array<ResumeItems>;
   skills: Array<Skills>;
+}
+
+interface projects {
+  image: string | StaticImageData,
+  name: string,
+  type: string,
+  url: string,
+}
+ 
+export interface PortfolioConfig {
+  title: string;
+  filters: Array<string>;
+  projects: Array<projects>;
 }

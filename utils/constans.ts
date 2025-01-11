@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import { AboutConfig, MeCardProps, NavItems, ResumeConfig } from './interfaces';
+import { AboutConfig, MeCardProps, NavItems, PortfolioConfig, ResumeConfig } from './interfaces';
 import MailIcon from '@/resources/images/mail.svg';
 import MobileIcon from '@/resources/images/mobile.svg';
 import BirthdayIcon from '@/resources/images/birthday.svg';
@@ -10,6 +10,14 @@ import Whatsapp from '@/resources/images/whatsapp.svg';
 import FullStack from '@/resources/images/full-stack.svg';
 import Frontend from '@/resources/images/frontend.svg';
 import Backend from '@/resources/images/backend.svg';
+import OlimpicGames from '@/resources/images/olympic-games.png';
+import AmericanCup from '@/resources/images/america-cup.png';
+import EuroCup from '@/resources/images/euro-cup.png';
+import Poke from '@/resources/images/pokemon.png';
+import SaluFood from '@/resources/images/food.png';
+import Games from '@/resources/images/games.png';
+import StarWars from '@/resources/images/star-wars.png';
+import Laws from '@/resources/images/laws.png';
 
 export const NAV_ITEMS: Array<NavItems> = [
   {
@@ -209,6 +217,61 @@ export const RESUME_CONFIG: ResumeConfig = {
     {
       name: 'Gcloud',
       experience: '60%',
+    },
+  ]
+}
+
+export const PORTFOLIO_CONFIG: PortfolioConfig = {
+  title: 'Portfolio',
+  filters: ['All', 'Work projects', 'Personal Projects'],
+  projects: [
+    {
+      image: Laws,
+      name: 'Laws Infobae',
+      type: 'Work projects',
+      url: 'https://www.infobae.com/leyes/',
+    },
+    {
+      image: OlimpicGames,
+      name: 'Olympic Games Infobae',
+      type: 'Work projects',
+      url: 'https://www.infobae.com/juegos-olimpicos/',
+    },
+    {
+      image: AmericanCup,
+      name: 'American Cup Infobae',
+      type: 'Work projects',
+      url: 'https://www.infobae.com/copa-america/',
+    },
+    {
+      image: EuroCup,
+      name: 'Euro Cup Infobae',
+      type: 'Work projects',
+      url: 'https://www.infobae.com/eurocopa/',
+    },
+    {
+      image: Poke,
+      name: 'Poke Master',
+      type: 'Personal Projects',
+      url: 'https://vimeo.com/765897676',
+    },
+    {
+      image: SaluFood,
+      name: 'SaluFood',
+      type: 'Personal Projects',
+      url: 'https://vimeo.com/752749566',
+    },
+    {
+      image: Games,
+      name: 'Games Master',
+      type: 'Personal Projects',
+      url: 'https://game-master-lime.vercel.app/',
+    },
+    {
+      image: StarWars,
+      name: 'Star Wars',
+      type: 'Personal Projects',
+      url: 'https://star-wars-snowy-three.vercel.app/',
     },
   ]
 }
