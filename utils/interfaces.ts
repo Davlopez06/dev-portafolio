@@ -45,7 +45,7 @@ export interface AboutConfig {
 export interface ResumeItems {
   title: string;
   date: string;
-description: string;
+  description: string;
 }
 
 interface Skills {
@@ -61,14 +61,20 @@ export interface ResumeConfig {
 }
 
 interface projects {
-  image: string | StaticImageData,
-  name: string,
-  type: string,
-  url: string,
+  image: string | StaticImageData;
+  name: string;
+  type: string;
+  url: string;
 }
- 
+
 export interface PortfolioConfig {
   title: string;
   filters: Array<string>;
   projects: Array<projects>;
+}
+
+export interface ContactConfig {
+  title: string;
+  googleMapUrl: string;
+  url: string;
 }

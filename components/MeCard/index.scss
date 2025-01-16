@@ -31,10 +31,7 @@
 
   &-personal-information-name {
     font-size: 16px;
-    text-shadow: 
-    0 0 10px var(--green-90),
-    0 0 20px var(--green-90),
-    0 0 40px var(--green-90);
+    text-shadow: 0 0 10px var(--green-90), 0 0 20px var(--green-90), 0 0 40px var(--green-90);
   }
 
   &-personal-information-profession {
@@ -71,6 +68,7 @@
     flex: 1;
     flex-direction: column;
     gap: 4px;
+    position: relative;
   }
 
   &-contact-information-label {
@@ -94,6 +92,31 @@
     align-items: center;
     display: flex;
     gap: 8px;
+  }
+
+  &-contact-information-tooltip {
+    background: var(--green-90);
+    border-radius: 9px;
+    color: var(--dark);
+    font-size: 10px;
+    left: 0;
+    padding: 2px 4px;
+    position: absolute;
+    top: calc(100% + 3px);
+    width: max-content;
+    z-index: 1;
+
+    &::before {
+      border-bottom: 5px solid var(--green-90);
+      border-left: 2.5px solid transparent;
+      border-right: 2.5px solid transparent;
+      bottom: 100%;
+      content: '';
+      height: 0;
+      left: 10%;
+      position: absolute;
+      width: 0;
+    }
   }
 
   @media screen and (max-width: 991px) {

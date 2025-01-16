@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import { AboutConfig, MeCardProps, NavItems, PortfolioConfig, ResumeConfig } from './interfaces';
+import { AboutConfig, ContactConfig, MeCardProps, NavItems, PortfolioConfig, ResumeConfig } from './interfaces';
 import MailIcon from '@/resources/images/mail.svg';
 import MobileIcon from '@/resources/images/mobile.svg';
 import BirthdayIcon from '@/resources/images/birthday.svg';
@@ -81,7 +81,8 @@ export const CARD_CONFIG: MeCardProps = {
 
 export const ABOUT_CONFIG: AboutConfig = {
   title: 'About Me',
-  description: 'Hi there! 👋 I’m David, a charismatic and passionate Full Stack Developer with 3 years of experience in the tech world , specializing in tool like React, JavaScript, TypeScript, Next.js, Node.js, Redux, CSS, SCSS, HTML, and Google Cloud services. I pride myself on being analytical, logical, polite, responsible,and honest, always focused on solving problems efficiently and creating practical solutions. I love learning, collaborating, and tackling challenges, bringing both my skills and a positive attitude to every project I work on. 🚀',
+  description:
+    'Hi there! 👋 I’m David, a charismatic and passionate Full Stack Developer with 3 years of experience in the tech world , specializing in tool like React, JavaScript, TypeScript, Next.js, Node.js, Redux, CSS, SCSS, HTML, and Google Cloud services. I pride myself on being analytical, logical, polite, responsible,and honest, always focused on solving problems efficiently and creating practical solutions. I love learning, collaborating, and tackling challenges, bringing both my skills and a positive attitude to every project I work on. 🚀',
   doingCard: [
     {
       icon: FullStack,
@@ -103,20 +104,23 @@ export const ABOUT_CONFIG: AboutConfig = {
     {
       gender: 'female',
       name: 'Paula Paredes',
-      recomended: 'I recommend David for his outstanding problem-solving skills with agility and willingness. His ability to develop creative and efficient solutions. He is always willing to take on new challenges and approaches each task with a positive attitude. His quick and adaptable approach makes him a great asset to any team.',
+      recomended:
+        'I recommend David for his outstanding problem-solving skills with agility and willingness. His ability to develop creative and efficient solutions. He is always willing to take on new challenges and approaches each task with a positive attitude. His quick and adaptable approach makes him a great asset to any team.',
     },
     {
       gender: 'male',
       name: 'Christhian Silupú',
-      recomended: 'I would not hesitate to recommend David to any company looking for a talented and reliable professional in the field of computer engineering. I am sure that his experience and skills will be a great contribution to any project he is involved in. I have had the opportunity to work with him on several projects and he is an excellent co-worker..',
+      recomended:
+        'I would not hesitate to recommend David to any company looking for a talented and reliable professional in the field of computer engineering. I am sure that his experience and skills will be a great contribution to any project he is involved in. I have had the opportunity to work with him on several projects and he is an excellent co-worker..',
     },
     {
       gender: 'male',
       name: 'Richard Llano',
-      recomended: 'In short, David is an exceptionally talented and committed Full Stack Developer. His positive attitude, work ethic, and willingness to learn and grow make him stand out as an excellent fit for your team. Don\'t hesitate to consider him to make the most of his passion and skills in web development!',
+      recomended:
+        'In short, David is an exceptionally talented and committed Full Stack Developer. His positive attitude, work ethic, and willingness to learn and grow make him stand out as an excellent fit for your team. Don\'t hesitate to consider him to make the most of his passion and skills in web development!',
     },
   ],
-}
+};
 
 export const RESUME_CONFIG: ResumeConfig = {
   title: 'Resume',
@@ -218,8 +222,8 @@ export const RESUME_CONFIG: ResumeConfig = {
       name: 'Gcloud',
       experience: '60%',
     },
-  ]
-}
+  ],
+};
 
 export const PORTFOLIO_CONFIG: PortfolioConfig = {
   title: 'Portfolio',
@@ -273,5 +277,11 @@ export const PORTFOLIO_CONFIG: PortfolioConfig = {
       type: 'Personal Projects',
       url: 'https://star-wars-snowy-three.vercel.app/',
     },
-  ]
-}
+  ],
+};
+
+export const CONTACT_CONFIG: ContactConfig = {
+  title: 'Contact',
+  googleMapUrl: process.env.NEXT_PUBLIC_GOOGLE_LOCATION || '',
+  url: process.env.NEXT_PUBLIC_API_URL || '',
+};

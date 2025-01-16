@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import './index.scss';
-import { ABOUT_CONFIG, NAV_ITEMS, PORTFOLIO_CONFIG, RESUME_CONFIG } from '@/utils/constans';
+import { ABOUT_CONFIG, CONTACT_CONFIG, NAV_ITEMS, PORTFOLIO_CONFIG, RESUME_CONFIG } from '@/utils/constans';
 import dynamic from 'next/dynamic';
 import Contact from './_children/Contact';
 
@@ -37,7 +37,7 @@ const DevInformation = () => {
   const getView = () => {
     if (view === 'resume') return <Resume {...RESUME_CONFIG} />;
     if (view === 'portfolio') return <Portfolio {...PORTFOLIO_CONFIG} />;
-    if (view === 'contact') return <Contact />;
+    if (view === 'contact') return <Contact {...CONTACT_CONFIG} />;
 
     return <About {...ABOUT_CONFIG} />;
   };

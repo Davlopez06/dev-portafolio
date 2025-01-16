@@ -1,12 +1,8 @@
 import { useState } from 'react';
+import SendIcon from '@/resources/images/send.svg';
+import Image from 'next/image';
 
-const Contact = () => {
-  const title = 'Contact';
-  const googleMapUrl =
-    // eslint-disable-next-line max-len
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.7780308778842!2d-75.57148961667278!3d6.292876731223696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e442f2b2e3e6549%3A0x2796a9a52e9db61f!2sCra.%2066%20%239594%2C%20Castilla%2C%20Medell%C3%ADn%2C%20Castilla%2C%20Medell%C3%ADn%2C%20Antioquia!5e0!3m2!1ses!2sco!4v1736555228877!5m2!1ses!2sco';
-  const url = '/api/saveToSheet';
-
+const Contact = ({ title = '', googleMapUrl = '', url = ''}) => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
 
   const getMap = () => {
@@ -50,13 +46,16 @@ const Contact = () => {
 
   const getForm = () => {
     return (
-      <div>
-        <p>Contact me</p>
-        <form onSubmit={handleSubmit}>
+      <div className='dev-information-contact-ctn'>
+        <p className="dev-information-contact-subtitle">Contact me</p>
+        <form onSubmit={handleSubmit} className="dev-information-contact-form">
           <input type="text" name="name" placeholder="Nombre" value={formData.name} onChange={handleChange} required />
           <input type="email" name="email" placeholder="Correo electrónico" value={formData.email} onChange={handleChange} required />
           <textarea name="message" placeholder="Mensaje" value={formData.message} onChange={handleChange} required />
-          <button type="submit">Enviar</button>
+          <button type="submit">
+            <Image src={SendIcon} alt="send-icon" width={18} height={18} />
+            Enviar
+          </button>
         </form>
       </div>
     );
