@@ -1,6 +1,5 @@
 import { google } from 'googleapis';
 import { NextApiRequest, NextApiResponse } from 'next';
-import path from 'path';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
@@ -9,7 +8,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     try {
       // Autenticar con Google Sheets API
       const auth = new google.auth.GoogleAuth({
-        keyFile: path.join(process.cwd(), './credentials/contact-me-447501-ff6d711bc7c1.json'), // Ruta al archivo de claves
+        credentials: JSON.parse(process.env.CREDENTIAL_JSON || ''),
         scopes: ['https://www.googleapis.com/auth/spreadsheets'],
       });
 
